@@ -28,8 +28,16 @@ const Navbar = () => {
     </li>
  ))}
     </ul>
+{/* Sign In only fordesktop */}
+   <div className='hidden lg:block'>
+    <button className= 'px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600  text-white font-semibold rounded-4xl shadow-lg  hover:from-blue-600 hover:to-indigo-700   hover:shadow-xl transition-all duration-300 ease-in-out'>
+      signIN
+    </button>
+   </div>
 
-     {/* mobile menu */}
+
+
+     {/* mobile menu button */}
      <button className='lg:hidden' onClick={()=>setopen(!open)}>
      {open ? (
       <img src={assets.close_Icon} alt="" className='w-7 h-7 '/>)
@@ -39,7 +47,34 @@ const Navbar = () => {
     }
      </button>
 
-      </div>
+
+ </div>
+    {/* mobile menu */}
+    {open &&(
+ 
+     <div className='lg:hidden bg-white shadow-md '>
+    <ul className='flex flex-col gap-4 p-4 text-gray-700 font-medium'>
+    {NavItems.map((item)=>(
+      <li key={item.name}>
+     <NavLink to={item.path} className={({isActive})=>
+    `block relative pb-1 ${
+      isActive ? "text-blue-600 after:absolute after:w-full after:left-0 after:bottom-0 after:h-[2px] after:bg-blue-600 "
+      : "text-gray-700"
+    }`
+    }>
+      {item.name}
+     </NavLink>
+      </li>
+    ))}
+    </ul>
+
+    <button className=  'px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600  text-white font-semibold rounded-4xl shadow-lg  hover:from-blue-600 hover:to-indigo-700   hover:shadow-xl   transition-all duration-300 ease-in-out'> 
+    SignIN
+    </button>
+     </div>
+    )}
+
+
     </nav>
   )
 }
