@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { assets, NavItems } from '../assets/assets'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
-  const [open, setopen] = useState();
+  const [open, setopen] = useState(false);
   return (
     <nav className='bg-white shadow-md w-full z-50 top-0 left-0 fixed'>
       <div className="flex items-center justify-between mx-auto p-4 max-w-6xl">
@@ -30,9 +30,11 @@ const Navbar = () => {
     </ul>
 {/* Sign In only fordesktop */}
    <div className='hidden lg:block'>
+    <Link to='/signin' onClick={()=> setopen(false)}>
     <button className= 'px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600  text-white font-semibold rounded-4xl shadow-lg  hover:from-blue-600 hover:to-indigo-700   hover:shadow-xl transition-all duration-300 ease-in-out'>
-      signIN
+      sign IN
     </button>
+    </Link>
    </div>
 
 
@@ -56,7 +58,7 @@ const Navbar = () => {
     <ul className='flex flex-col gap-4 p-4 text-gray-700 font-medium'>
     {NavItems.map((item)=>(
       <li key={item.name}>
-     <NavLink to={item.path} className={({isActive})=>
+     <NavLink to={item.path} onClick={()=> setopen(false)} className={({isActive})=>
     `block relative pb-1 ${
       isActive ? "text-blue-600 after:absolute after:w-full after:left-0 after:bottom-0 after:h-[2px] after:bg-blue-600 "
       : "text-gray-700"
@@ -68,9 +70,11 @@ const Navbar = () => {
     ))}
     </ul>
 
+<Link to="/signin" onClick={()=> setopen(false)}>
     <button className=  'px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600  text-white font-semibold rounded-4xl shadow-lg  hover:from-blue-600 hover:to-indigo-700   hover:shadow-xl   transition-all duration-300 ease-in-out'> 
-    SignIN
+    Sign IN
     </button>
+</Link>
      </div>
     )}
 

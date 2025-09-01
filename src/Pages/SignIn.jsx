@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { assets } from '../assets/assets'
 
 const SignIn = () => {
+    const [email, setemail] = useState("");
+    const [password, setpassword] = useState("");
+
+    const handleSubmit =(e)=>{
+ e.preventDefault()  // page reload ko rokta hai
+ console.log(email);
+ console.log(password)
+    }
   return (
     <div className='flex items-center justify-center min-h-screen bg-gray-100'>
       <div className='w-full max-w-md bg-white p-8 rounded-2xl shadow-xl ' > 
@@ -14,15 +22,15 @@ const SignIn = () => {
     </div>
 
    {/* form */}
- <form className='space-y-5'>
+ <form className='space-y-5' onSubmit={handleSubmit}>
     <div>
-        <label className='block text-gray-600 font-medium mb-1'>Email</label>
- <input type="email" placeholder='Enter Your Email' className='w-full px-4 py-2 rounded-lg focus:ring-2 border focus:ring-blue-600 outline-none' />
+        <label htmlFor='email' className='block text-gray-600 font-medium mb-1'>Email</label>
+ <input id='email' type="email" placeholder='Enter Your Email' value={email} onChange={(e)=> setemail(e.target.value)} className='w-full px-4 py-2 rounded-lg focus:ring-2 border focus:ring-blue-600 outline-none' required />
     </div>
 
 <div>
-    <label className='block font-medium text-gray-700 mb-1'>Password</label>
-<input type="password" placeholder='Enter Your Password' className='w-full px-4 py-2 focus:ring-2 focus:ring-blue-600 border rounded-lg outline-none' />
+    <label htmlFor='password' className='block font-medium text-gray-700 mb-1'>Password</label>
+<input id='password' type="password" placeholder='Enter Your Password' value={password} onChange={(e)=> setpassword(e.target.value) } className='w-full px-4 py-2 focus:ring-2 focus:ring-blue-600 border rounded-lg outline-none' required/>
 </div>
 {/* buttons */}
  <button className='w-full py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg shadow-md hover:to-indigo-700 transition duration-300' type='submit'>
@@ -45,6 +53,12 @@ const SignIn = () => {
 Sign in with google
 </button>
 
+{/* extra links */}
+
+<div className='flex justify-between mt-6 text-sm text-blue-600'>
+<a href="/forgot-password" className='hover:underline' > Forgot-Password</a>
+<a href="/Create-Account" className='hover:underline' > Create-Account</a>
+</div>
       </div>
     </div>
   )
