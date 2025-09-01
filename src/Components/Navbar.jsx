@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between mx-auto p-4 max-w-6xl">
         {/* logo */}
         <div className='flex items-center gap-2'>
-            <img className='w-10 h-20 cursor-pointer bg-cover ' src={assets.logo} alt="logo" />
+            <img className='w-20 h-20 cursor-pointer bg-cover ' src={assets.logo1 } alt="logo" />
             <h1 className='font-bold text-xl text-blue-600 mt-1' > My Hottel</h1>
         </div>
 
