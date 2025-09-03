@@ -1,14 +1,32 @@
 import React, { useState } from 'react'
 import { assets } from '../assets/assets'
-
+import axios from 'axios'
 const SignIn = () => {
     const [email, setemail] = useState("");
     const [password, setpassword] = useState("");
+    const [message, setMessage] = useState();
 
-    const handleSubmit =(e)=>{
+    const handleSubmit = async (e)=>{
+
  e.preventDefault()  // page reload ko rokta hai
- console.log(email);
- console.log(password)
+     try {
+      const res = await axios.post("/api/signup",{
+        email,
+        password,
+         })
+         console.log("backend response✅ ", res.data)
+      setMessage(res.data.msg);
+      setemail(""),
+      setpassword("")
+
+     } catch (error) {
+      if (error.response) {
+        setMessage(error.response.data.msg)
+      } else {
+        setMessage("Server Error     ")
+      }
+     }    
+
     }
   return (
     <div className='flex items-center justify-center min-h-screen bg-gray-100'>
