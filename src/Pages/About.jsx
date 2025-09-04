@@ -57,7 +57,13 @@ const About = () => {
   <div className="p-6 shadow-lg rounded-xl bg-white">
     <img src={assets.manager} alt="Manager" className="w-32 h-32 rounded-full mx-auto object-cover" />
     <h3 className="mt-4 font-semibold text-gray-800">Jameel</h3>
-    <p className="text-sm text-gray-500">Hotel Manager</p>
+    <p className="text-sm text-gray-500">CEO</p>
+  </div>
+
+  <div className='p-6 shadow-lg rounded-xl bg-white hover:scale-105 transition duration-300 ease-in-out text-center'>
+<img src={assets.staff} alt="" className='w-32 h-32 rounded-full object-cover mx-auto ' />
+<h3 className=' font-semibold mt-4 text-gray-800'>Our team</h3>
+<p className='text-sm text-gray-500 '> hotel staff</p>
   </div>
 </div>
 
@@ -86,7 +92,6 @@ allowFullScreen=""
 
 className='border-0 w-full' 
 >
-
 </iframe>
 </div>
 
