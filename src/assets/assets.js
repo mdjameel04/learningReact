@@ -30,4 +30,16 @@ export const reviews =[
     {name: "Swamy", rating: 4.5, comment: "Good service and friendly staff"},
     {name: "Advaith", rating: 4.5, comment: "a peacefull place to stay"},
     {name: "venu", rating: 5, comment: "Best hotel exprience I've had in years"} 
+];
+
+export const services= [
+    {icons: "🛏️", 
+        title: "Luxury Rooms",
+        desc: " Spacious, clean and well-furnshied rooms with modren amenities" 
+    },
+
+    {icon: "🍽️",
+        title: " Fine Dinning",
+        desc: "Multi-Cuisine"
+    }
 ]
