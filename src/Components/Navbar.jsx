@@ -15,8 +15,8 @@ const Navbar = () => {
 
     {/* Desktop menu */}
     <ul className='hidden lg:flex gap-8 text-gray-700 font-medium'>
- {NavItems.map((item,iindex)=>(
-    <li key={item.name}>
+ {NavItems.map((item,index)=>(
+    <li key={index}>
         <NavLink to={item.path} className={({isActive})=>
         `relative pb-1 transition ${
             isActive ? "text-blue-600 after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:bg-blue-600 "

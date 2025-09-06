@@ -21,7 +21,7 @@ export const assets ={
 export const NavItems = [
     {name: "Home", path : '/'},
     {name: "About", path : '/About'},
-    {name: "Services", path : '/Services'},
+    {name: "Service", path : '/Service'},
     {name: "Contact", path : '/Contact'},
 ];
 
@@ -33,13 +33,35 @@ export const reviews =[
 ];
 
 export const services= [
-    {icons: "🛏️", 
+    {icon: "🛏️", 
         title: "Luxury Rooms",
         desc: " Spacious, clean and well-furnshied rooms with modren amenities" 
     },
 
     {icon: "🍽️",
         title: " Fine Dinning",
-        desc: "Multi-Cuisine"
-    }
+        desc: "Multi-Cuisine",
+    },
+    {
+        icon: "💆",
+        title: "Spa & Wellness",
+        desc: "Relax with our professional spa, massage and wellness services.",
+    },
+      {
+    icon: "📶",
+    title: "Free Wi-Fi",
+    desc: "High-speed internet available in every room and lobby.",
+  },
+  {
+    icon: "🎉",
+    title: "Event Halls",
+    desc: "Spacious banquet and meeting halls for weddings, parties & conferences.",
+  },
+];
+
+export const packages= [
+    {name:"bussiness Packaage", Price: "₹4,999/night", features: ["Executive Room", "Breakfast Included", "Conference Room Access"]},
+  { name: "Family Package", price: "₹6,999/night", features: ["Family Suite", "Meals Included", "Kids Play Area"] },
+  { name: "Honeymoon Package", price: "₹8,999/night", features: ["Luxury Suite", "Candlelight Dinner", "Spa Session for Couple"] },
+
 ]
