@@ -60,7 +60,7 @@ export const services= [
 ];
 
 export const packages= [
-    {name:"bussiness Packaage", Price: "₹4,999/night", features: ["Executive Room", "Breakfast Included", "Conference Room Access"]},
+    {name:"bussiness Packaage", Price: "₹4,999/night", features: ["Executive Room", "Breakfast Included", "Conference Room Access"]}, 
   { name: "Family Package", price: "₹6,999/night", features: ["Family Suite", "Meals Included", "Kids Play Area"] },
   { name: "Honeymoon Package", price: "₹8,999/night", features: ["Luxury Suite", "Candlelight Dinner", "Spa Session for Couple"] },
 
