@@ -6,6 +6,7 @@ import knife_logo from './knife-img.png'
 import google_logo from './google.logo.svg'
 import manager from './jameel.jpg'
 import staff from './team-members.png'
+import hotel from './hote-IMg1.jpeg'
 export const assets ={
     menu_icon,
     close_Icon,
@@ -14,7 +15,8 @@ export const assets ={
     knife_logo,
     google_logo,
     manager,
-    staff
+    staff,
+    hotel
 }
 
 
